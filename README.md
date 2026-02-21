@@ -5,19 +5,19 @@ It simulates a real DevOps workflow used in production environments.
 
 **📌 Architecture**
 
-GitHub → Jenkins → Docker → EC2 Deployment
-Source Code stored in GitHub
-Jenkins pulls code and runs pipeline
-Docker builds application image
-Container runs on EC2
+•	GitHub → Jenkins → Docker → EC2 Deployment
+•	Source Code stored in GitHub
+•	Jenkins pulls code and runs pipeline
+•	Docker builds application image
+•	Container runs on EC2
 
 **🛠 Tech Stack**
 
-1.Node.js
-2.Docker
-3.Jenkins
-4.AWS EC2 (Ubuntu 22.04)
-5.Git & GitHub
+•	Node.js
+•	Docker
+•	Jenkins
+•	AWS EC2 (Ubuntu 22.04)
+•	Git & GitHub
 
 **📂 Project Structure**
 
@@ -30,24 +30,25 @@ node-cicd-app/
 
 **⚙️ Application Overview**
 
-A simple Node.js HTTP server that returns:
-CI/CD Pipeline Working!
-Runs on port 3000 inside Docker container.
+•	A simple Node.js HTTP server that returns:
+•	CI/CD Pipeline Working!
+•	Runs on port 3000 inside Docker container.
 
 **🐳 Docker Configuration**
 
-Dockerfile:
-FROM node:18
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-EXPOSE 3000
-CMD ["node", "app.js"]
+•	Dockerfile:
+•	FROM node:18
+•	WORKDIR /app
+•	COPY package*.json ./
+•	RUN npm install
+•	COPY . .
+•	EXPOSE 3000
+•	CMD ["node", "app.js"]
 
 **🔄 Jenkins Pipeline Script**
 
 pipeline {
+   
     agent any
 
     stages {
@@ -80,33 +81,33 @@ pipeline {
 **🚀 How to Run This Project**
 
 1️⃣ Launch EC2 Instance
-Ubuntu 22.04
-Open ports:
-22 (SSH)
-8080 (Jenkins)
-80 (App)
+•	Ubuntu 22.04
+•	Open ports:
+•	22 (SSH)
+•	8080 (Jenkins)
+•	80 (App)
 
 2️⃣ Install Required Tools on EC2
-Java (OpenJDK 17)
-Jenkins
-Docker
+•	Java (OpenJDK 17)
+•	Jenkins
+•	Docker
 
 3️⃣ Configure Jenkins
-Install suggested plugins
-Create Pipeline job
-Add pipeline script
-Click Build Now
+•	Install suggested plugins
+•	Create Pipeline job
+•	Add pipeline script
+•	Click Build Now
 
 🌐 Access the Application
-After successful build:
-http://your-ec2-public-ip
-You should see:
-CI/CD Pipeline Working!
+•	After successful build:
+•	http://your-ec2-public-ip
+•	You should see:
+•	CI/CD Pipeline Working!
 
 **🔥 What This Project Demonstrates**
 
-CI/CD fundamentals
-Jenkins Pipeline as Code
-Docker image build automation
-Automated deployment on EC2
-DevOps workflow integration
+•	CI/CD fundamentals
+•	Jenkins Pipeline as Code
+•	Docker image build automation
+•	Automated deployment on EC2
+•	DevOps workflow integration
