@@ -13,11 +13,11 @@ Container runs on EC2
 
 **🛠 Tech Stack**
 
-Node.js
-Docker
-Jenkins
-AWS EC2 (Ubuntu 22.04)
-Git & GitHub
+1.Node.js
+2.Docker
+3.Jenkins
+4.AWS EC2 (Ubuntu 22.04)
+5.Git & GitHub
 
 **📂 Project Structure**
 
